@@ -28,7 +28,7 @@ public class RegisterService {
 
     private final static int CONFIRM_MINUTES = 60;
 
-    @Value("${front.url}")
+    @Value("${FRONT_URL}")
     private String frontUrl;
 
     private final AccountRepository accountRepository;

@@ -1,0 +1,18 @@
+version: "3"
+
+volumes:
+  berth_booking_db_volume:
+
+services:
+  berth_booking_db:
+    image: postgres:12.4
+    restart: on-failure
+    volumes:
+      - berth_booking_db_volume:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5434:5432"
+    environment:
+      - POSTGRES_DB=berth_booking_db_v2
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=1

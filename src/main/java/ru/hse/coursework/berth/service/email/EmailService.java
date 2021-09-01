@@ -20,9 +20,9 @@ public class EmailService {
     public final static String EMAIL_PARAM = "email";
     private final static DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
-    @Value("${back.url}")
+    @Value("${BACK_URL}")
     private String backUrl;
-    @Value("${front.url}")
+    @Value("${FRONT_URL}")
     private String frontUrl;
 
     private final EmailSender emailSender;

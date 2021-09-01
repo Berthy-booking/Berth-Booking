@@ -29,9 +29,9 @@ public class TinkoffClient extends AbstractHttpClient {
 
     public TinkoffClient(ObjectMapper mapper,
                          RestTemplate client,
-                         @Value("${tinkoff.terminalKey}") String terminalKey,
-                         @Value("${back.url}") String backUrl,
-                         @Value("${front.url}") String frontUrl) {
+                         @Value("${TINKOFF_TERMINAL_KEY}") String terminalKey,
+                         @Value("${BACK_URL}") String backUrl,
+                         @Value("${FRONT_URL}") String frontUrl) {
         this.mapper = mapper;
         this.client = client;
 

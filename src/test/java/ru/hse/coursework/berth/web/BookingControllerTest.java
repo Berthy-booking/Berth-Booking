@@ -15,7 +15,11 @@ import ru.hse.coursework.berth.database.entity.Order;
 import ru.hse.coursework.berth.database.entity.Ship;
 import ru.hse.coursework.berth.database.entity.enums.BookingStatus;
 import ru.hse.coursework.berth.database.entity.enums.ShipType;
-import ru.hse.coursework.berth.database.repository.*;
+import ru.hse.coursework.berth.database.repository.AbstractAccountTest;
+import ru.hse.coursework.berth.database.repository.BerthRepository;
+import ru.hse.coursework.berth.database.repository.BookingRepository;
+import ru.hse.coursework.berth.database.repository.OrderRepository;
+import ru.hse.coursework.berth.database.repository.ShipRepository;
 import ru.hse.coursework.berth.service.berth.BerthPart;
 import ru.hse.coursework.berth.service.booking.dto.BookingDto;
 import ru.hse.coursework.berth.service.booking.dto.BookingPayLinkResp;
@@ -50,7 +54,7 @@ public class BookingControllerTest extends AbstractAccountTest {
     @Autowired
     PaymentController paymentController;
 
-    @Value("${tinkoff.terminalKey}")
+    @Value("${TINKOFF_TERMINAL_KEY}")
     private String terminalKey;
 
     @Autowired

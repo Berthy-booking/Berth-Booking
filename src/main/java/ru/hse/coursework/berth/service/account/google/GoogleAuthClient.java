@@ -24,7 +24,7 @@ public class GoogleAuthClient {
     private final JsonFactory jsonFactory;
     private final GoogleClientSecrets clientSecrets;
 
-    public GoogleAuthClient(@Value("${google.secret_path}") String secretPath) throws Exception {
+    public GoogleAuthClient(@Value("${GOOGLE_SECRET_PATH}") String secretPath) throws Exception {
         transport = new NetHttpTransport();
         jsonFactory = new JacksonFactory();
         clientSecrets = GoogleClientSecrets.load(jsonFactory, new FileReader(secretPath));

@@ -40,7 +40,7 @@ public class TokenService {
     private final AccountRefreshTokenRepository refreshTokenRepository;
     private final EntityManager em;
 
-    @Value("${auth.secret_key}")
+    @Value("${AUTH_SECRET_KEY}")
     private String secretKey;
 
 

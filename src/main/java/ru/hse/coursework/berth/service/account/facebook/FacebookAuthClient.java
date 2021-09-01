@@ -16,9 +16,9 @@ public class FacebookAuthClient extends AbstractHttpClient {
     private final RestTemplate client;
     private final ObjectMapper mapper;
 
-    @Value("${facebook.client_id}")
+    @Value("${FACEBOOK_CLIENT_ID}")
     private String clientId;
-    @Value("${facebook.client_secret}")
+    @Value("${FACEBOOK_CLIENT_SECRET}")
     private String clientSecret;
 
     @Override

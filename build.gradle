@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'ru.hse.coursework'
-version = '2.0'
+version = '3.0'
 sourceCompatibility = '11'
 
 repositories {
